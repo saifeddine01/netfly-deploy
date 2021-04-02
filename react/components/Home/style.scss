@@ -1,0 +1,449 @@
+@mixin bp-small {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.home {
+    background-color: white!important;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.home button, .home button:hover, .home button:active, .home button:focus {
+    background-color: transparent;
+    border: 2px solid rgba(23, 87, 92, 1);
+    transition: 0.1s ease-in-out;
+}
+
+
+.home-section {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+}
+
+.bg-black {
+    min-height: 64.5em;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    overflow: hidden;
+}
+
+.hero-bg {
+    background-color: black;
+    background: url('../../img/gif2.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.svg {
+    position: absolute;
+    background-color: orange;
+    height: 100%;
+}
+
+.about-section {
+    text-align: center;
+    width: 100%;
+    background: rgba(23, 87, 92, 1);
+    padding: 8em 0em 8em 0em;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+.about-section .about-section-headtext {
+    font-size: 2.3em;
+    width: 80%;
+    color: lightgrey;
+    margin: 0 auto;
+    font-family: 'Alegreya Sans'!important;
+}
+
+.para01-section {
+    background: url('./../../img/ffc-paraglide.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    min-height: 13em;
+    max-height: 28em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: lightgrey;
+    font-family: 'Sketch', 'open sans', arial!important;
+    font-size: 2.8em;
+    @include bp-small {
+        font-size: 2.1em;
+    }
+    margin-top: 8em;
+    padding: 2em 0;
+    position: relative;
+    text-align: center;
+    z-index: 100;
+}
+
+.para01-section:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.textbox {
+    height: 100%;
+}
+
+.ie > .para01-section > .textbox > p {
+    font-size: 1em;
+}
+
+.para01-section > .textbox > p {
+    color: lightgrey;
+    font-size: 1.3em;
+    font-family: 'Sketch', 'open sans', arial!important;
+    font-style: italic;
+}
+
+.para01-section .textbox .arthor {
+    font-size: 0.9em!important;
+}
+
+section {
+    background: white;
+}
+
+.recentProjects-section h1 {
+    text-align: center;
+    padding: 2em 0em;
+    font-size: 3.6em;
+    color: rgba(23, 87, 92, 1);
+    font-family: 'HarabaraMais'!important;
+}
+
+.tech-section {
+
+    padding: 0em 0em 6em 0em;
+    overflow: hidden;
+
+}
+
+.tech-section h1 {
+    text-align: center;
+    padding: 1em 0em 0.5em 0em;
+    font-size: 3.6em;
+    color: rgba(23, 87, 92, 1);
+    font-family: 'HarabaraMais';
+}
+
+.tech-section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 15em;
+}
+
+.tech-section img {
+    max-width: 11em;
+    max-height: 10em;
+    display: block;
+}
+
+.slider-container {
+    display:flex;
+}
+
+.slider{
+    display: flex;
+    min-height: 100%;
+}
+
+.carousel .carousel-inner .item {
+    width: 100%;
+}
+
+.carousel .carousel-inner .item section div div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.TechItems2 img {
+    max-height: 10em;
+    align-self: center;
+}
+
+.expressjs, .github {
+    max-height: 7em!important;
+    position: relative;
+    top:0.8em;
+}
+
+.gulp {
+    max-width: 6em!important;
+}
+
+.mongodb {
+    max-height: 7em!important;
+}
+
+.TechItems2 img:nth-child(2) {
+    max-height: 10em;
+}
+
+@mixin services-pic () {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2em;
+    & > img {
+        width: 80px;
+        height: 90px;
+    }
+}
+
+@mixin services-txt () {
+    font-size: 1.4em;
+    font-family: 'Alegreya Sans'!important;
+    font-weight: bold;
+}
+
+
+.para02-section {
+    background: url('./../../img/work.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    min-height: 13em;
+    max-height: 28em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: lightgrey;
+    font-size: 2.8em;
+    padding: 2em 0;
+    position: relative;
+    text-align: center;
+    z-index: 100;
+    .accomp-container {
+        padding: 0.8em 0;
+        .accomp-num {
+            font-family: 'HarabaraMais'!important;
+            font-size: 1.6em;
+            color:rgba(53, 117, 122, 1);
+        }
+        .accomp-txt {
+            font-family: 'HarabaraMais'!important;
+            font-size: 0.7em;
+            font-weight: 100;
+            white-space: nowrap;
+        }
+    }
+}
+
+.para02-section:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.services-section {
+    background: rgba(23, 87, 92, 1);
+    padding-bottom: 3em;
+    h1 {
+        text-align: center;
+        color: lightgrey;
+        padding: 1em 0em 0.5em 0em;
+        font-size: 3.6em;
+        font-family: 'HarabaraMais';
+    }
+    .services-col:nth-child(1) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(2) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(3) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(4) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(5) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(6) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(7) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(8) > .services-container > .services-pic {
+        @include services-pic();
+    }
+    .services-col:nth-child(1) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-col:nth-child(2) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-col:nth-child(3) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-col:nth-child(4) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-col:nth-child(5) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-col:nth-child(6) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-col:nth-child(7) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-col:nth-child(8) > .services-container > .services-txt {
+        @include services-txt();
+    }
+    .services-container {
+        text-align: center;
+        margin-bottom: 6em;
+        .services-pic {
+
+        }
+        .services-txt {
+            color:lightgrey;
+        }
+    }
+}
+
+@mixin social-pic () {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2em;
+    & > img {
+        width: 80px;
+        height: 90px;
+    }
+}
+
+@mixin social-txt () {
+    font-size: 1.4em;
+    font-family: 'Alegreya Sans'!important;
+    font-weight: bold;
+}
+
+.social-section {
+    padding-bottom: 3em;
+    h1 {
+        text-align: center;
+        color: rgba(23, 87, 92, 1);
+        padding: 1em 0em 0.5em 0em;
+        font-size: 3.6em;
+        font-family: 'HarabaraMais';
+    }
+    .social-col:nth-child(1) > .social-container > .social-pic {
+        @include social-pic();
+    }
+    .social-col:nth-child(2) > .social-container > .social-pic {
+        @include social-pic();
+    }
+    .social-col:nth-child(3) > .social-container > .social-pic {
+        @include social-pic();
+    }
+
+    .social-col:nth-child(1) > .social-container > .social-txt {
+        @include social-txt();
+    }
+    .social-col:nth-child(2) > .social-container > .social-txt {
+        @include social-txt();
+    }
+    .social-col:nth-child(3) > .social-container > .social-txt {
+        @include social-txt();
+    }
+
+    .social-container {
+        text-align: center;
+        margin-bottom: 6em;
+        position: relative;
+         a {
+             display: block;
+             height: 100%;
+             top: 0;
+             width: 100%;
+             position: absolute;
+         }
+        .social-txt {
+            color: rgba(23, 87, 92, 1);
+        }
+    }
+}
+
+.resume {
+    height: 25em;
+    background: url('./../../img/resumebg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin: 0;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding: 0!important;
+    position: relative;
+}
+
+.resume:after {
+    position: absolute;
+    opacity: 0.6;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    box-shadow: inset 0px 0px 10px 0px black;
+}
+
+.algn-ctr {
+    height: 100%;
+    text-align: center;
+    z-index: 10000;
+    .button-container {
+        height: 100%;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        button {
+            font-family: 'HarabaraMais', arial;
+            font-size: 2em;
+            padding: 0em 2.5em;
+            border: none;
+            &:hover {
+                background: rgba(23, 127, 122, 1)!important;
+            }
+        }
+    }
+}

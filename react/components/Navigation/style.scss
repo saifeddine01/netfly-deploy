@@ -1,0 +1,102 @@
+@mixin bp-small {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: rgba(23, 87, 92, 1);
+    box-shadow: 0px -13px 50px 2px black;
+    border-bottom: 0px solid transparent;
+    z-index: 100000;
+}
+
+.navbar-nav * {
+    color: white!important;
+    text-transform: uppercase;
+    font-size: 1.18em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    font-family: "HarabaraMais";
+}
+
+.navbar-nav ul {
+    background: white!important;
+}
+
+.navbar-nav li {
+    position: relative;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar-nav li:hover {
+    // box-shadow: inset 0px 0px 10px black;
+    // background: transparent;
+    background: rgba(123, 187, 192, 0.3)!important;
+}
+
+.nav-li-selected {
+    background: rgba(123, 187, 192, 0.3)!important;
+}
+
+a[role="button"],a[role="button"]:focus, a[role="button"]:active {
+    border:0px!important;
+    outline: none!important;
+}
+
+.navbar-inverse .navbar-brand {
+    color: lightgrey;
+    font-size: 2.98em;
+    line-height: .52em;
+    font-weight: 100;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    font-family: "HarabaraMais";
+    .logo-a {
+
+        .grn {
+            color: green!important;
+        }
+    }
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:active, .navbar-inverse .navbar-brand:focus {
+    color: lightgrey;
+}
+
+.menuButton {
+    border: none;
+    border-radius: 0;
+    &:hover, &:focus {
+        background: rgba(23, 127, 122, 1)!important;
+    }
+}
+
+@media (max-width: 930px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-collapse.collapse:not(.in) {
+    display: none !important;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

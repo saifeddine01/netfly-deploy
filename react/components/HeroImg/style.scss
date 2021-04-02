@@ -1,0 +1,49 @@
+@mixin bp-small {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.heroImg {
+    position: relative;
+    height: 100vh;
+    min-height: 64.5em;
+    background: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+    margin-bottom: 0;
+    z-index: 0;
+}
+
+.heroImg > .heroImg-text-container {
+    padding: 2em 0;
+    text-align: center;
+    color: lightgrey;
+    display: flex;
+    position: relative;
+    @include bp-small {
+        top: -8em;
+    }
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 0;
+    font-family: 'HarabaraMais'!important;
+}
+
+.heroImg .heroImg-text-container h1 {
+    font-size: 8em;
+    @include bp-small {
+        font-size: 4em;
+    }
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.heroImg .heroImg-text-container p {
+    font-size: 3em;
+}
+
+.heroImg .heroImg-text-container button {
+    font-size: 0.6em;
+}

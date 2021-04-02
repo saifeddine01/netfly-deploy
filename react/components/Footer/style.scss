@@ -1,0 +1,65 @@
+@mixin bp-small {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #113F42;
+}
+
+.footer-header {
+    width: 100%;
+    margin: 0;
+    color: lightgrey;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-footer {
+    height: 4em;
+    width: 100%;
+    background-color: #0a2628;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1.3em;
+}
+
+.footer-nav div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-header-txt-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .email {
+        padding: 1.5em;
+        font-family: "HarabaraMais"!important;
+        letter-spacing: 0.2em;
+        h1 {
+            color: lightgrey;
+            @include bp-small {
+                font-size: 1.7em;
+            }
+        }
+        height: 100%!important;
+    }
+}

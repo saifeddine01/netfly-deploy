@@ -1,0 +1,87 @@
+
+@font-face {
+    font-family: 'HarabaraMais';
+    src: url('./fonts/HarabaraMais.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Angelina';
+    src: url('./fonts/angelina.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sketch';
+    src: url('./fonts/Sketch.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin bp-menu {
+  @media only screen and (max-width: 59em) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+{
+    html{
+        overflow: hidden;
+        height: 100%;
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(23, 87, 92, 1);
+    overflow-x: hidden;
+}
+
+.center-col {
+    float: none;
+    margin: 0 auto;
+}
+
+.regBtn {
+    background: #17575C!important;
+    color: white!important;
+    padding: 0em 2.5em!important;
+    border: none!important;
+    transition: 0.2s ease-in-out!important;
+    border-radius: 0;
+    &:hover {
+        background: rgba(23, 127, 122, 1)!important;
+    }
+}
